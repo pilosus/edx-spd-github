@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Style Rules</title>
+</head>
+
+<body>
+<section class="container">
+  <div class="static_tab_wrapper">
+    <div class="xblock xblock-student_view xblock-student_view-static_tab xmodule_display xmodule_StaticTabModule" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="static_tab" data-request-token="58f225ba7f3711e58950123b72d0b863" data-runtime-version="1" data-usage-id="block-v1:UBCx+SPD3x+3T2015+type@static_tab+block@86a7af433b134f0a952b5614f5ad9a78" data-type="HTMLModule" data-course-id="course-v1:UBCx+SPD3x+3T2015">
+  <script type="json/xblock-args" class="xblock-json-init-args">
+    {"xmodule-type": "HTMLModule"}
+  </script>
+  <h2>Style Rules</h2>
+<p>In addition to basic structure of the design recipes, there are a number of small details that matter when designing programs.</p>
+<p>These rules, or style conventions, are common through the world of software development. Different communities have their own conventions, so what's considered proper for one language is not proper for another. Sometimes, even within a programming language, one group of users will use different conventions than another.</p>
+<p>And so it is with our course. We have our own set of style conventions which we ask you to follow:</p>
+<p></p>
+<h4>Notation and Naming Conventions</h4>
+<p></p>
+<ol>
+<li><strong> Comments that are a permanent part of the program should have TWO semi-colons followed by a space. </strong>
+<ul>
+<li>These always go at the beginning of the line.</li>
+<li>These include signatures, purpose statements, etc.</li>
+<li>Eg.
+<pre>;; Number -&gt; Number
+;; multiples number n by 2</pre>
+</li>
+</ul>
+</li>
+<li><strong> Comments that are temporary should have ONE semi-colon.</strong>
+<ul>
+<li>These are comments that would be deleted in a real program.</li>
+<li>These include commenting out stubs.</li>
+<li>Eg.
+<pre>;(define (double n)  0)  ; this is the stub </pre>
+</li>
+<li>
+<pre><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Comments that are at the end of a line should also have 1 semi-colon, also as shown above.</span></pre>
+</li>
+</ul>
+</li>
+<li><strong> Function signatures should be formatted this way:</strong>
+<ul>
+<li>
+<pre>WorldState -&gt; Image </pre>
+</li>
+</ul>
+</li>
+<li><strong> Use names that make sense with respect to the problem. </strong>
+<ul>
+<li>Eg. Good names for a variable representing a count of some sort include <tt>count</tt>, <tt>cnt</tt> or possibly <tt>c</tt>.</li>
+</ul>
+</li>
+<li><strong>Do not use _ in names, use - instead</strong>
+<ul>
+<li>Eg. <tt>render-body</tt> rather than <tt>render_body</tt></li>
+</ul>
+</li>
+<li><strong> Data definition names (type names) should use <a href="http://en.wikipedia.org/wiki/CamelCase" rel="nofollow" title="Link: http://en.wikipedia.org/wiki/CamelCase"> upper camel case </a> </strong>
+<ul>
+<li>Eg. <tt>WorldState</tt> rather than <tt>world-state</tt>, <tt>world_state</tt> or <tt>worldState</tt>.</li>
+</ul>
+</li>
+<li><strong> Function names and parameter names should be hyphenated and not capitalized</strong>
+<ul>
+<li>Eg. <tt>posn-x</tt> or <tt>tock-ball</tt>.</li>
+</ul>
+</li>
+<li><strong>Functions that produce Boolean should have names that end in ?</strong>
+<ul>
+<li>Eg. <tt>pass?</tt> or <tt>aisle?</tt></li>
+</ul>
+</li>
+<li><strong>Constant names should be in ALL-CAPS.</strong>
+<ul>
+<li>Eg. <tt>HEIGHT</tt>, <tt>STOP-WHEN</tt>.</li>
+</ul>
+</li>
+</ol>
+<p></p>
+<h4>Design and Layout Choices</h4>
+<ol>
+<li><strong>No line should span more than 80 characters. </strong>
+<ul>
+<li>The bottom right of Dr. Racket shows how long a line is.</li>
+<li>Break lines at those points suggested by examples you see on the websites.</li>
+<li>Cond clauses, and the three parts of an if statement, should be on all separate lines.</li>
+</ul>
+</li>
+<li><strong> Your code should be indented using the conventions seen in our examples </strong>
+<ul>
+<li>Ctrl+I on PC, or command+I on Mac, are shortcuts that will automatically indent.</li>
+</ul>
+</li>
+<li><strong> No dangling parenthesis </strong>
+<ul>
+<li>No parentheses left dangling on a line without any other text.</li>
+<li>Eg.
+<pre>(define (double n) 
+	(* 2 n)
+) ; This is a dangling parenthesis</pre>
+</li>
+</ul>
+</li>
+<li><strong> No function should span more than five to ten lines.</strong>
+<ul>
+<li>If it does, reconsider your interpretation of the "one task, one function" guideline.</li>
+<li>This rule is relaxed when we learn <tt>local</tt></li>
+</ul>
+</li>
+<li><strong> In the functions section of a program, the most important functions should be first, and the least important ones last </strong>
+<ul>
+<li>For world programs the <tt>main</tt> function should come first, followed by the <tt>big-bang</tt> handler functions.</li>
+<li>NOTE: You don't have to design the functions in this order, you just have to arrange the program this way.</li>
+</ul>
+</li>
+<li><strong> Use <tt>cond</tt> rather than <tt>if</tt> when the template of a function is handling multiple cases of a one of data definition.</strong></li>
+<li><strong>Don't leave extra examples of making the program do something lying around- use <tt>check-expects</tt> instead.</strong></li>
+</ol>
+<p></p>
+<h4>A Small Comprehensive Example</h4>
+<p></p>
+<!------------ TABLE START -------------------------------------------------->
+<table border="1">
+<tbody>
+<tr><th><span face="verdana, sans-serif" style="font-family: verdana, sans-serif;"><span style="font-weight: normal;">Good</span></span></th><th><span face="verdana, sans-serif" style="font-family: verdana, sans-serif;"><span style="font-weight: normal;">Bad</span></span></th></tr>
+<tr valign="top">
+<td>
+<pre><code>
+</code>
+;; String -&gt; String
+;; Produce a greeting by adding "Hello" before a string.
+(check-expect (greet "World!") "Hello World!")
+(check-expect (greet "goodbye") "Hello goodbye")
+(check-expect (greet "loneliness") "Hello loneliness")
+
+;(define (greet o)  ; stub
+;  "a")
+
+(define (greet o)
+  (string-append "Hello" " " o))
+
+</pre>
+<div></div>
+</td>
+<!-- -------------------------------------------- -->
+<td>
+<pre><code>
+</code>
+; string -&gt; string <br>
+; (greet "foo") produces "Hello foo" <br>
+
+(define (greet str)             
+              ;; put "Hello " before string
+              (string-append "Hello " str)
+)
+<br>
+(check-expect (greet "World!") "Hello World!")
+(check-expect (greet "goodbye")  "Hello goodbye")
+(check-expect (greet "lonliness")    "Hello lonliness")
+
+;(define (accio o)  ; stub 
+;  "a")
+
+(greet "World!")
+(greet "goodbye")
+(greet "lonliness")
+
+</pre>
+<div></div>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+</div>
+
+  </div>
+</section>
+</body> </html>

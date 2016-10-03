@@ -1,0 +1,24 @@
+
+
+This design quiz will have 3 phases:
+
+  *  First you will design a solution to a given problem.
+  *  Second, you will watch an assessment tutorial video.
+  *  Finally, you will submit a self-assessment of your completed function design.
+
+PROBLEM:
+
+Download the starter file and complete the design problem.
+
+Be sure to follow all of the relevant recipes, and pay special attention to following all the helper rules.
+
+You will assess your solution to the design quiz according to the following rubric:
+
+1) Is the program "commit ready"?
+The file should be neat and tidy, no tests or code should be commented out other than stubs and templates and all scratch work should be removed.
+2) Is the design complete?
+All design elements should be present, including those from HtDF and/or HtDD, and each element should be well-formed.
+3) Does the design have high internal quality?
+ All HtDF elements should have high internal quality, the signatures should be correct, the purposes should be clear and succinct, examples should be well-formed, correct, and cover the entire program, the function bodies should be clear. For this design quiz, we are focusing specifically on the internal quality of the helper functions. The design should include a helper function whenever there is a reference to a non-primitive type, a function operating on arbitrary-sized data, a knowledge domain shift, or a function composition.
+4) Does the design satisfy the problem requirements?
+The design solutions should satisfy the problem statements. If there is any ambiguity in the problem statements the solution should identify and resolve that ambiguity.
